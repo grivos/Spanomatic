@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Spanomatic</string>
+    <string name="test_string_1">This is a <annotation bgColor="@color/material_green">green background color</annotation> text, and this one is <annotation fgColor="@color/material_purple">purple foreground</annotation>.</string>
+    <string name="test_string_2">This is a <annotation drawable="@drawable/ic_cake_16dp">cake</annotation> drawable span.</string>
+    <string name="test_string_3">This is a <annotation relativeTextSize="2">relative text size</annotation> span.</string>
+    <string name="test_string_4">Spanomatic supports <annotation format="strikethrough">strikethrough</annotation>, <annotation format="bold">bold</annotation>, <annotation format="italic">italic</annotation>, <annotation format="boldItalic">bold italic</annotation>, <annotation format="superscript">superscript</annotation>, <annotation format="subscript">subscript</annotation> and <annotation format="underline">underline</annotation> spans.</string>
+    <string name="test_string_5"><annotation quote="">This is a quote</annotation></string>
+    <string name="test_string_6"><annotation bullet="">And this is a bullet</annotation></string>
+    <string name="test_string_7">Here we have three different typefaces: <annotation typeface="latoRegular">Lato Regular</annotation>, <annotation typeface="latoLight">Lato Light</annotation> and <annotation typeface="latoBold">Lato Bold</annotation></string>
+    <string name="test_string_8">This span clickable: <annotation format="underline"><annotation click="exampleClick">click me</annotation></annotation></string>
+</resources>
