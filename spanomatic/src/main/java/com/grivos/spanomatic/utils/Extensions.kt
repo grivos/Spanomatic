@@ -49,4 +49,4 @@ fun Context.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any):
 }
 
 fun Fragment.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any): CharSequence? =
-    context?.addSpansFromAnnotations(id, formatArgs)
+    context?.addSpansFromAnnotations(id, *formatArgs)
