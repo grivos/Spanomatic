@@ -45,7 +45,9 @@ fun Context.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any):
     return if (text is SpannedString) {
         val replaced = PlaceholderFormatter.format(text, *formatArgs)
         addSpansFromAnnotations(replaced, this)
-    } else text
+    } else {
+        getString(id, formatArgs)
+    }
 }
 
 fun Fragment.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any): CharSequence? =
