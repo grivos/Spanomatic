@@ -32,7 +32,7 @@ Add these dependencies to your app module's build.gradle file:
 ```groovy
 dependencies {
     implementation 'com.grivos.spanomatic:spanomatic:1.0.1'
-    implementation 'io.github.inflationx:viewpump:1.0.0'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
 }
 ```
 
