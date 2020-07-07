@@ -7,7 +7,7 @@ import io.github.inflationx.viewpump.Interceptor
 class SpanomaticInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): InflateResult {
         val result = chain.proceed(chain.request())
-        val view = result.view()
+        val view = result.view
         if (view is TextView) {
             view.text = Spanomatic.addSpansFromAnnotations(view.text, view.context)
         }
