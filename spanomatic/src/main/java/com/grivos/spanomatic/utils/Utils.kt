@@ -2,7 +2,7 @@ package com.grivos.spanomatic.utils
 
 import android.content.Context
 import android.graphics.Color
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import android.util.TypedValue
 
 fun parseAnnotationColor(colorValue: String, context: Context): Int {

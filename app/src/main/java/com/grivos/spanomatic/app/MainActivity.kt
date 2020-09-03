@@ -2,7 +2,7 @@ package com.grivos.spanomatic.app
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import com.grivos.spanomatic.utils.addSpanClickListener
 import io.github.inflationx.viewpump.ViewPumpContextWrapper
