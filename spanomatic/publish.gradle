@@ -17,7 +17,7 @@ ext {
     siteUrl = 'https://github.com/grivos/Spanomatic'
     gitUrl = 'https://github.com/grivos/Spanomatic.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.1.0'
 
     developerId = 'grivos'
     developerName = 'Guy Griv'
