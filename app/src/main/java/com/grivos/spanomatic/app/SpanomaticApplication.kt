@@ -2,7 +2,7 @@ package com.grivos.spanomatic.app
 
 import android.app.Application
 import android.graphics.Typeface
-import android.support.v4.content.res.ResourcesCompat
+import androidx.core.content.res.ResourcesCompat
 import com.grivos.spanomatic.Spanomatic
 import com.grivos.spanomatic.SpanomaticInterceptor
 import com.grivos.spanomatic.TypefaceProvider
