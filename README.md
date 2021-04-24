@@ -1,5 +1,4 @@
 # Spanomatic
-[![Download](https://api.bintray.com/packages/grivos/Spanomatic/Spanomatic/images/download.svg)](https://bintray.com/grivos/Spanomatic/Spanomatic/_latestVersion)  
 Spanomatic is an Android library that allows you to automatically add spans to text from resources strings.
 
 * [Getting Started](#getting-started)
@@ -27,11 +26,21 @@ Spanomatic is an Android library that allows you to automatically add spans to t
 ## Getting Started
 
 ### Dependencies
-Spanomatic uses the [ViewPump](https://github.com/InflationX/ViewPump) library, that provides an API for pre/post-inflation interceptors.
+Add Jitpack in your root build.gradle:
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+Spanomatic uses the [ViewPump](https://github.com/InflationX/ViewPump) library, that provides an API for pre/post-inflation interceptors.  
 Add these dependencies to your app module's build.gradle file:
 ```groovy
 dependencies {
-    implementation 'com.grivos.spanomatic:spanomatic:1.1.0'
+    ...
+    implementation 'com.github.grivos:Spanomatic:1.1.0'
     implementation 'io.github.inflationx:viewpump:2.0.3'
 }
 ```
