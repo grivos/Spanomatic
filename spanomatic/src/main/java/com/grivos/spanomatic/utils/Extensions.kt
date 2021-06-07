@@ -1,14 +1,13 @@
 package com.grivos.spanomatic.utils
 
 import android.content.Context
-import androidx.annotation.StringRes
-import androidx.fragment.app.Fragment
 import android.text.SpannableString
 import android.text.SpannedString
 import android.text.method.LinkMovementMethod
 import android.widget.TextView
+import androidx.annotation.StringRes
+import androidx.fragment.app.Fragment
 import com.grivos.spanomatic.PlaceholderFormatter
-import com.grivos.spanomatic.Spanomatic.addSpansFromAnnotations
 import com.grivos.spanomatic.spans.ListenableClickableSpan
 
 fun TextView.addSpanClickListener(
@@ -50,5 +49,17 @@ fun Context.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any):
     }
 }
 
+fun Context.addSpansFromAnnotations(text: CharSequence, vararg formatArgs: Any): CharSequence? {
+    return if (text is SpannedString) {
+        val replaced = PlaceholderFormatter.format(text, *formatArgs)
+        addSpansFromAnnotations(replaced, this)
+    } else {
+        text
+    }
+}
+
 fun Fragment.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any): CharSequence? =
     context?.addSpansFromAnnotations(id, *formatArgs)
+
+fun Fragment.addSpansFromAnnotations(text: CharSequence, vararg formatArgs: Any): CharSequence? =
+    context?.addSpansFromAnnotations(text, *formatArgs)
