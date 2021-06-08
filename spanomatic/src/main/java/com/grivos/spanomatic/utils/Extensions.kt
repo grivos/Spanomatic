@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import com.grivos.spanomatic.PlaceholderFormatter
+import com.grivos.spanomatic.Spanomatic
 import com.grivos.spanomatic.spans.ListenableClickableSpan
 
 fun TextView.addSpanClickListener(
@@ -43,7 +44,7 @@ fun Context.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any):
     val text = getText(id)
     return if (text is SpannedString) {
         val replaced = PlaceholderFormatter.format(text, *formatArgs)
-        addSpansFromAnnotations(replaced, this)
+        Spanomatic.addSpansFromAnnotations(replaced, this)
     } else {
         getString(id, formatArgs)
     }
@@ -52,9 +53,9 @@ fun Context.addSpansFromAnnotations(@StringRes id: Int, vararg formatArgs: Any):
 fun Context.addSpansFromAnnotations(text: CharSequence, vararg formatArgs: Any): CharSequence? {
     return if (text is SpannedString) {
         val replaced = PlaceholderFormatter.format(text, *formatArgs)
-        addSpansFromAnnotations(replaced, this)
+        Spanomatic.addSpansFromAnnotations(replaced, this)
     } else {
-        text
+        text.toString().format(*formatArgs)
     }
 }
 
